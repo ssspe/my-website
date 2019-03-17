@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../static/images/logo.svg';
-import background from '../static/images/background.jpg';
+import background from '../static/images/big-background.svg';
 import arcade1 from '../static/images/drawing-1.svg';
 import arcade1_light from '../static/images/drawing-1-light.svg';
 import arcade2 from '../static/images/drawing-2.svg';
@@ -112,8 +112,9 @@ class Home extends Component {
 
     render() {
       return(
-        <div>
-          <canvas ref="canvas" width={window.innerWidth} height={window.innerHeight} />
+        <div className="container">
+          <img className="backgroundImage" ref="image" src={background} />
+          <canvas className="canvas" ref="canvas" width={window.innerWidth} height={window.innerHeight} />
         </div>
       )
     }
